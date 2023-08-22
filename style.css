@@ -1,5 +1,5 @@
 body {
-    background: rgb(125, 198, 205);
+    background: rgb(255, 0, 0);
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
@@ -20,7 +20,7 @@ nav {
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(229, 22, 236);
     flex: 1;
     margin: 0;
 }
@@ -55,7 +55,7 @@ main {
 
 /* portfolio styles */
 #interests {
-    border: 4px silver ridge;
+    border: 4px rgb(29, 235, 94) ridge;
     padding: 8px;
 }
 h2, h3 {
