@@ -46,7 +46,7 @@ main {
     
 }
 img{
-  border:5px solid #808080;
+  border:5px solid #FFD700;
 }
 .sidebar {
     margin-right: 25px;
@@ -62,9 +62,10 @@ img{
 
 /* portfolio styles */
 #interests {
-    border: 10px rgb(0, 0, 0) ridge;
-    padding: 8px;
+    border: 10px rgb(228, 228, 228) ridge;
+    padding: 4px;
 }
+
 h2, h3 {
     margin: 0px;
 }
