@@ -35,14 +35,16 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: #2e0303;
+    color: gold;
+  
 }
 
 /* main container area beneath menu */
 main {
     background: rgb(255, 255, 255);
     display: flex;
-    border-radius: 8px
+    border-radius: 8px;
+    
     
 }
 img{
@@ -93,7 +95,7 @@ h2, h3 {
 
         #portfolio a {
             text-decoration: none;
-            color: #454545;
+            color: #000000;
         }
                     /* responsive web design */
                     @media screen and (min-width: 120px) and (max-width: 1080px) {
