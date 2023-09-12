@@ -53,7 +53,7 @@ $(function () {
   //first platform//
    createPlatform (600,500,200,11);
    //secondplatform//
-   createPlatform (1200,550,100,5);
+   createPlatform (1200,600,100,280);
    //third platform//
    createPlatform (600,250,250,5);
   //fourth platform//
@@ -74,6 +74,9 @@ $(function () {
 
 createCollectable('diamond',675,450);
 createCollectable('grace',20,700);
+createCollectable('database',300,200);
+createCollectable('steve',800,200);
+createCollectable('database',1260,550);
 
 
     // TODO 3
