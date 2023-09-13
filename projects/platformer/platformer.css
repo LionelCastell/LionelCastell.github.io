@@ -1,9 +1,10 @@
 body {
   margin: 0px;
+  
 }
 
 canvas {
-  background-color: lightgray;
+  background-image:url("https://e0.pxfuel.com/wallpapers/343/772/desktop-wallpaper-dragon-ball-z-namek-background-gallery-dragon-ball-scenery.jpg");
 }
 
 img {

@@ -45,7 +45,7 @@ $(function () {
     // example usage: createPlatform(x,y,width,height)
    //Step1//
    //roof//
-   createPlatform(0,0,1400,11);
+   createPlatform(0,0,1400,20);
    //
    createPlatform (1,630,200,11);
    //starting Platform//
@@ -65,6 +65,8 @@ $(function () {
   //sixth platform//
   createPlatform (230,350,200,11);
   //seventh platform//
+  createPlatform (850,600,200,11);
+  createPlatform (1300,690,200,11);
     
     // TODO 2
     // Create collectables
@@ -76,7 +78,8 @@ createCollectable('diamond',675,450);
 createCollectable('grace',20,700);
 createCollectable('database',300,200);
 createCollectable('steve',800,200);
-createCollectable('database',1230,500);
+createCollectable('database',1330,500,1);
+
 
 
     // TODO 3
@@ -85,7 +88,7 @@ createCollectable('database',1230,500);
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 
-createCannon('top',)
+createCannon
 
 
     /////////////////////////////////////////////////
