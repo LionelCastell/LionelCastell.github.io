@@ -99,8 +99,8 @@ createCollectable("dragonballs",1330,500,1);
 
 createCannon("right",250,1600,10,10);
 createCannon("bottom",400,1700,10,10);
-createCannon("top",1400,1700,10,10);
-
+createCannon("top",1400,1800,10,10);
+createCannon("right",535,1600,10,10);
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
