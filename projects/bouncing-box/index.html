@@ -15,7 +15,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 200px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -71,9 +71,35 @@
 			turn it around! 
 			*/
 			function update() {
+				moveBoxTo(boardWidth)
+				/* Increase postionX by 10 HERE*/
 				
 
+// When you first create the Variable...
+
+var positionX = 0;
+
+// during update... 
+// Frame 1
+positionX = 0 + 10;         // positionX = 10
+moveBoxTo(positionX);
+
+// Frame 2
+positionX = 10 + 10;         // positionX = 20
+moveBoxTo(positionX);
+
+// Frame 3
+positionX = 20 + 10;         // positionX = 30
+moveBoxTo(positionX);
+
+// Frame 4
+positionX = 30 + 10;         // positionX = 40
+moveBoxTo(positionX);
+
+// so on...
+
 			};
+
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -81,7 +107,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
+				positionX = 0;
+				 // your code to increase the points variable by 1
+				changeBoxText(points);
+
 
 
 			};
