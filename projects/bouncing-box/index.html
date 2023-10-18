@@ -7,21 +7,23 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: teal;
-			font-size: 300%;
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			font-size: 200%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;
-			/* <--- Change me! */
+			left: 0px; /* <--- Change me! */
 		}
 
 		.board {
 			height: 100vh;
+			background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b4978e7f-1e75-4f66-9e8f-524f5a96cc6c/d9nfsnx-64dbbf90-6141-44e3-bf87-5c966b4416f3.png/v1/fill/w_1192,h_670,q_70,strp/daily_sketch__7___one_piece__endless_ocean_by_kunokillerkarpfen_d9nfsnx-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2I0OTc4ZTdmLTFlNzUtNGY2Ni05ZThmLTUyNGY1YTk2Y2M2Y1wvZDluZnNueC02NGRiYmY5MC02MTQxLTQ0ZTMtYmY4Ny01Yzk2NmI0NDE2ZjMucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FS4-Y5HI4hibXtx-y5apOr23QotFc1R8xN7pUMHRfvY");
+			background-repeat: no-repeat;
+			background-size: 100%;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -29,6 +31,7 @@
 </head>
 
 <body class="board">
+
 	<!-- HTML for the box -->
 	<div class="box">?</div>
 
@@ -52,8 +55,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY)
 			}
 
 			// changes the text displayed on the Box
@@ -66,45 +70,53 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
+			var positionX = 12;
+			var points = 1;
+			var speed = 5;
+			
+			
 
-			var positionX = 0;
-			var points = 0;
-			var speed = 10;
+
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				/* Your Code to Increase positionX by 10 HERE */
-				positionX = positionX + 10;
-				moveBoxTo(positionX);
+				/* your code to increase positionX by 10 HERE*/
+				positionX = positionX + speedX;
+				if (positionX > boardWidth) {
+					speedX = -speedX
+				}
+				if (positionX < 0) {
+					speedX = -speedX
+				}
+				positionY = positionY + speedY;
+				if (positionY > boardHeight){
+					speedY = -speedY
+				}
+				if (positionY < 0){
+					speedY = -speedY
+				}
+				moveBoxTo(positionX, positionY);
 
 			};
 
-
-
-		};
-
-
-		/* 
-		This Function will be called each time the box is clicked. Each time it is called,
-		it should increase the points total, increase the speed, and move the box to
-		the left side of the screen.
-		*/
-		function handleBoxClick() {
-			positionX = 0;
-			// your code to increase the points variable by 1
-			points = points + 1;
-			changeBoxText(points);
-			speed = speed + 3;
-
-		}
+			/* 
+			This Function will be called each time the box is clicked. Each time it is called,
+			it should increase the points total, increase the speed, and move the box to
+			the left side of the screen.
+			*/
+			function handleBoxClick() {
+				positionX = 0;
+				// your code to increase the point variables by 1 //
+				changeBoxText(points);
+				points = points + 1
+				
 
 
 			};
-		}
-) ();
+		})();
 	</script>
 </body>
 
