@@ -10,7 +10,7 @@
 			width: 100px;
 			height: 100px;
 			background-color: gold;
-			font-size: 200%;
+			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
@@ -20,8 +20,8 @@
 		}
 
 		.board {
-			height: 100vh;
-			background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b4978e7f-1e75-4f66-9e8f-524f5a96cc6c/d9nfsnx-64dbbf90-6141-44e3-bf87-5c966b4416f3.png/v1/fill/w_1192,h_670,q_70,strp/daily_sketch__7___one_piece__endless_ocean_by_kunokillerkarpfen_d9nfsnx-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2I0OTc4ZTdmLTFlNzUtNGY2Ni05ZThmLTUyNGY1YTk2Y2M2Y1wvZDluZnNueC02NGRiYmY5MC02MTQxLTQ0ZTMtYmY4Ny01Yzk2NmI0NDE2ZjMucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.FS4-Y5HI4hibXtx-y5apOr23QotFc1R8xN7pUMHRfvY");
+			height: 100px;
+			background-image: url("");
 			background-repeat: no-repeat;
 			background-size: 100%;
 		}
@@ -70,11 +70,12 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
-			var positionX = 12;
+			var positionX = 1;
 			var points = 1;
-			var speed = 5;
-			
-			
+			var speed = 10;
+			var positionY = 1;
+			var speedY = 10
+			var boardHeight = jQuery(window).height();
 
 
 			/* 
@@ -84,18 +85,18 @@
 			*/
 			function update() {
 				/* your code to increase positionX by 10 HERE*/
-				positionX = positionX + speedX;
+				positionX = positionX + speed;
 				if (positionX > boardWidth) {
-					speedX = -speedX
+					speed = -speed
 				}
-				if (positionX < 0) {
-					speedX = -speedX
+				else if (positionX < 0) {
+					speed = -speed
 				}
 				positionY = positionY + speedY;
-				if (positionY > boardHeight){
+				 if (positionY > boardHeight){
 					speedY = -speedY
 				}
-				if (positionY < 0){
+			    else if (positionY < 0){
 					speedY = -speedY
 				}
 				moveBoxTo(positionX, positionY);
@@ -112,7 +113,19 @@
 				// your code to increase the point variables by 1 //
 				changeBoxText(points);
 				points = points + 1
-				
+				if (speed > 0) {
+					speed = speed + 3
+				}
+				else if (speed < 0) {
+					speed = speed - 3
+				}
+				else if (speedY > 0){
+					speedY = speedY + 3
+				}
+				else if (speedY < 0){
+					speedY = speedY + 3
+				}
+
 
 
 			};
