@@ -61,9 +61,20 @@ circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
     */
     function update() {
         // TODO 4 : Update the circle's position //
+        physikz.updatePosition();
+        physikz.updatePosition();
+        physikz.updatePosition();
+        physikz.updatePosition();
+        physikz.updatePosition();
+      
 
 
         // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
+        game.checkCirclePosition()
+        game.checkCirclePosition()
+        game.checkCirclePosition()
+        game.checkCirclePosition()
+        game.checkCirclePosition()
 
 
         // TODO 9 : Iterate over the array
